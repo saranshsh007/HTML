@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+div:hover {
+  width: 300px;
+  height: 300px;
+  transform: rotate(180deg);
+}
+        #rcorners1 {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
+
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
+#borderimg1 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 50 round;
+}
+
+#borderimg2 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 20% round;
+}
+
+#borderimg3 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30% round;
+}
+        #div1 {
+  position: absolute;
+  left: 50px;
+  width: calc(100% - 100px);
+  border: 1px solid black;
+  background-color: yellow;
+  padding: 5px;
+}
+        .test {color: green;} 
+p {color: red;} 
+        [title~="flower"] {
+  border: 5px solid yellow;
+}body {
+  counter-reset: section;
+}
+
+h1 {
+  counter-reset: subsection;
+}
+
+h1::before {
+  counter-increment: section;
+  content: "Section " counter(section) ". ";
+}
+
+h2::before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) " ";
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Transition + Transform</h1>
+
+<p>Hover over the div element below:</p>
+
+<div></div>
+    <h1>The border-image Property</h1>
+
+<p id="borderimg1">border-image: url(border.png) 50 round;</p>
+<p id="borderimg2">border-image: url(border.png) 20% round;</p>
+<p id="borderimg3">border-image: url(border.png) 30% round;</p>
+    <h1>The border-radius Property</h1>
+
+<p>Rounded corners for an element with a specified background color:</p>
+<p id="rcorners1">Rounded corners!</p>
+<p>Rounded corners for an element with a border:</p>
+<p id="rcorners2">Rounded corners!</p>
+    <h1>The calc() Function</h1>
+
+<p>Create a div that stretches across the window, with a 50px gap between both sides of the div and the edges of the window:</p>
+
+<div id="div1">Some text...</div>
+<br></br>
+    <p class="test">Hello World!</p>
+
+    <!-- <h2>CSS [attribute~="value"] Selector</h2>
+<p>All images with the title attribute containing the word "flower" get a yellow border.</p>
+
+<img src="klematis.jpg" title="klematis flower" width="150" height="113">
+<img src="img_flwr.gif" title="flower" width="224" height="162">
+<img src="img_tree.gif" title="tree" width="200" height="358"> -->
+<h1>HTML/CSS Tutorials</h1>
+<h2>HTML</h2>
+<h2>CSS</h2>
+<h2>Bootstrap</h2>
+<h2>W3.CSS</h2>
+
+<h1>Scripting Tutorials</h1>
+<h2>JavaScript</h2>
+<h2>jQuery</h2>
+<h2>React</h2>
+
+<h1>Programming Tutorials</h1>
+<h2>Python</h2>
+<h2>Java</h2>
+<h2>C++</h2>
+
+</body>
+</html>
